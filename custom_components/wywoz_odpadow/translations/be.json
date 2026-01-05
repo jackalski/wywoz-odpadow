@@ -38,13 +38,13 @@
       "already_configured": "Інтэграцыя ўжо настроена"
     },
     "fractions": {
-      "zmieszane odpady opakowaniowe": "Змешаныя адходы ўпакоўкі",
-      "niesegregowane (zmieszane) odpady komunalne": "Несартыраваныя (змешаныя) камунальныя адходы",
-      "opakowania z papieru i tektury": "Упакоўка з паперы і кардону",
-      "opakowania ze szkła": "Шкляная ўпакоўка",
-      "odpady ulegające biodegradacji": "Біяразградальныя адходы",
-      "odpady kuchenne ulegające biodegradacji": "Кухонныя біяразградальныя адходы",
-      "odpady wielkogabarytowe": "Вялікагабарытныя адходы"
+      "zmieszane_odpady_opakowaniowe": "Змешаныя адходы ўпакоўкі",
+      "niesegregowane_zmieszane_odpady_komunalne": "Несартыраваныя (змешаныя) камунальныя адходы",
+      "opakowania_z_papieru_i_tektury": "Упакоўка з паперы і кардону",
+      "opakowania_ze_szkla": "Шкляная ўпакоўка",
+      "odpady_ulegajace_biodegradacji": "Біяразградальныя адходы",
+      "odpady_kuchenne_ulegajace_biodegradacji": "Кухонныя біяразградальныя адходы",
+      "odpady_wielkogabarytowe": "Вялікагабарытныя адходы"
     }
   }
 }

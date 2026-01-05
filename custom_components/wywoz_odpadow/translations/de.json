@@ -38,13 +38,13 @@
       "already_configured": "Integration ist bereits konfiguriert"
     },
     "fractions": {
-      "zmieszane odpady opakowaniowe": "Gemischte Verpackungsabfälle",
-      "niesegregowane (zmieszane) odpady komunalne": "Nicht getrennte (gemischte) Siedlungsabfälle",
-      "opakowania z papieru i tektury": "Papier- und Pappverpackungen",
-      "opakowania ze szkła": "Glasverpackungen",
-      "odpady ulegające biodegradacji": "Biologisch abbaubare Abfälle",
-      "odpady kuchenne ulegające biodegradacji": "Küchenabfälle biologisch abbaubar",
-      "odpady wielkogabarytowe": "Sperrmüll"
+      "zmieszane_odpady_opakowaniowe": "Gemischte Verpackungsabfälle",
+      "niesegregowane_zmieszane_odpady_komunalne": "Nicht getrennte (gemischte) Siedlungsabfälle",
+      "opakowania_z_papieru_i_tektury": "Papier- und Pappverpackungen",
+      "opakowania_ze_szkla": "Glasverpackungen",
+      "odpady_ulegajace_biodegradacji": "Biologisch abbaubare Abfälle",
+      "odpady_kuchenne_ulegajace_biodegradacji": "Küchenabfälle biologisch abbaubar",
+      "odpady_wielkogabarytowe": "Sperrmüll"
     }
   }
 }

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import re
 from datetime import datetime, timedelta
 from typing import Any
 
@@ -278,7 +279,26 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
             # If translation loading fails, use empty dict (will return original names)
             self._fraction_translations = {}
 
+    def _fraction_name_to_snake_case(self, fraction_name: str) -> str:
+        """Convert fraction name from API to snake_case key for translations."""
+        # Convert to lowercase, replace spaces and special chars with underscores
+        # Remove parentheses and their content, then clean up multiple underscores
+        key = fraction_name.lower()
+        # Remove parentheses and their content
+        key = re.sub(r'\s*\([^)]*\)\s*', '_', key)
+        # Replace spaces and special characters with underscores
+        key = re.sub(r'[^a-z0-9]+', '_', key)
+        # Remove multiple consecutive underscores
+        key = re.sub(r'_+', '_', key)
+        # Remove leading/trailing underscores
+        key = key.strip('_')
+        return key
+
     def _translate_fraction_name(self, fraction_name: str) -> str:
         """Translate fraction name using loaded translations."""
-        return self._fraction_translations.get(fraction_name, fraction_name)
+        # Convert fraction name to snake_case key
+        snake_case_key = self._fraction_name_to_snake_case(fraction_name)
+        # Look up translation using snake_case key
+        translated = self._fraction_translations.get(snake_case_key, fraction_name)
+        return translated
 

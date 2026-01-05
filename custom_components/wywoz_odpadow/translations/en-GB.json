@@ -38,13 +38,13 @@
       "already_configured": "Integration is already configured"
     },
     "fractions": {
-      "zmieszane odpady opakowaniowe": "Mixed packaging waste",
-      "niesegregowane (zmieszane) odpady komunalne": "Non-segregated (mixed) municipal waste",
-      "opakowania z papieru i tektury": "Paper and cardboard packaging",
-      "opakowania ze szkła": "Glass packaging",
-      "odpady ulegające biodegradacji": "Biodegradable waste",
-      "odpady kuchenne ulegające biodegradacji": "Kitchen biodegradable waste",
-      "odpady wielkogabarytowe": "Large-size waste"
+      "zmieszane_odpady_opakowaniowe": "Mixed packaging waste",
+      "niesegregowane_zmieszane_odpady_komunalne": "Non-segregated (mixed) municipal waste",
+      "opakowania_z_papieru_i_tektury": "Paper and cardboard packaging",
+      "opakowania_ze_szkla": "Glass packaging",
+      "odpady_ulegajace_biodegradacji": "Biodegradable waste",
+      "odpady_kuchenne_ulegajace_biodegradacji": "Kitchen biodegradable waste",
+      "odpady_wielkogabarytowe": "Large-size waste"
     }
   }
 }
