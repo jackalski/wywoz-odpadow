@@ -1,0 +1,30 @@
+name: Create new version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version number"
+        required: true
+        type: string
+
+jobs:
+  new_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.VERSION_TOKEN }}
+
+      - name: Add version to packages
+        run: npm version ${{ inputs.version }} --git-tag-version false
+
+      - name: tag, commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: '${{ inputs.version }}'
+          add: 'package.json package-lock.json'
+          push: true
+          tag: '${{ inputs.version }}'
+          tag_push: '--force'

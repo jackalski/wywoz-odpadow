@@ -1,0 +1,86 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install aiohttp voluptuous
+
+      - name: Validate manifest
+        run: |
+          python -c "import json; manifest = json.load(open('custom_components/wywoz_odpadow/manifest.json')); print(f'Domain: {manifest[\"domain\"]}'); print(f'Version: {manifest[\"version\"]}')"
+
+      - name: Validate hacs.json
+        run: |
+          python -c "import json; json.load(open('hacs.json'))"
+
+      - name: Check Python syntax
+        run: |
+          python -m py_compile custom_components/wywoz_odpadow/*.py
+
+      - name: Lint with pylint
+        run: |
+          pip install pylint
+          pylint custom_components/wywoz_odpadow/*.py --disable=all --enable=errors || true
+
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "release" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+          else
+            VERSION=$(python -c "import json; print(json.load(open('custom_components/wywoz_odpadow/manifest.json'))['version'])")
+          fi
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Version: ${VERSION}"
+
+      - name: Create release archive
+        run: |
+          ARCHIVE_NAME="wywoz_odpadow-${{ steps.version.outputs.version }}.zip"
+          cd custom_components
+          zip -r "../${ARCHIVE_NAME}" wywoz_odpadow/
+          cd ..
+          echo "ARCHIVE_NAME=${ARCHIVE_NAME}" >> $GITHUB_ENV
+          echo "Created ${ARCHIVE_NAME}"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wywoz-odpadow-${{ steps.version.outputs.version }}
+          path: ${{ env.ARCHIVE_NAME }}
+          retention-days: 30
+
+      - name: Build summary
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Manifest validated" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ HACS config validated" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Python syntax checked" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Build archive created: ${{ env.ARCHIVE_NAME }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+

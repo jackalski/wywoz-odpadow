@@ -31,4 +31,7 @@ jobs:
       - name: Check translations
         run: |
           python -c "import json, os; [json.load(open(f'custom_components/wywoz_odpadow/translations/{f}')) for f in os.listdir('custom_components/wywoz_odpadow/translations') if f.endswith('.json')]"
-
+      - name: HACS validation
+        uses: "hacs/action@main"
+        with:
+            category: "plugin"
