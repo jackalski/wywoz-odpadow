@@ -128,3 +128,18 @@ This project is licensed under the GPL-3.0 license - see the [LICENSE](LICENSE) 
 - [Warszawa 19115](https://warszawa19115.pl/) portal for providing the API
 - [TrashCard](https://github.com/amaximus/trash-card) for the excellent Lovelace card
 
+<!-- Badges -->
+
+[commits-shield]: https://img.shields.io/github/commit-activity/y/jackalski/wywoz-odpadow.svg?style=for-the-badge
+[commits]: https://github.com/jackalski/wywoz-odpadow/commits/main
+[license-shield]: https://img.shields.io/github/license/jackalski/wywoz-odpadow.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/jackalski/wywoz-odpadow.svg?style=for-the-badge
+[releases]: https://github.com/jackalski/wywoz-odpadow/releases
+[downloads-badge]: https://img.shields.io/github/downloads/jackalski/wywoz-odpadow/total?style=for-the-badge
+[build-badge]: https://img.shields.io/github/actions/workflow/status/jackalski/wywoz-odpadow/build.yml?label=Build&style=for-the-badge
+
+<!-- References -->
+[home-assistant]: https://www.home-assistant.io/
+[hacs]: https://hacs.xyz
+[release-url]: https://github.com/jackalski/wywoz-odpadow/releases
