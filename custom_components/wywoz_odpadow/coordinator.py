@@ -269,9 +269,11 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
             )
             if translations and DOMAIN in translations:
                 domain_translations = translations[DOMAIN]
-                # Get translations from fractions section
-                if "fractions" in domain_translations:
-                    self._fraction_translations = domain_translations["fractions"]
+                # Get translations from config.fractions section (fractions is now inside config)
+                if "config" in domain_translations and isinstance(domain_translations["config"], dict):
+                    config_translations = domain_translations["config"]
+                    if "fractions" in config_translations:
+                        self._fraction_translations = config_translations["fractions"]
         except Exception:
             # If translation loading fails, use empty dict (will return original names)
             self._fraction_translations = {}

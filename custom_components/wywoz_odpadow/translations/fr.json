@@ -36,16 +36,16 @@
     },
     "abort": {
       "already_configured": "L'intégration est déjà configurée"
+    },
+    "fractions": {
+      "zmieszane odpady opakowaniowe": "Déchets d'emballage mélangés",
+      "niesegregowane (zmieszane) odpady komunalne": "Déchets municipaux non triés (mélangés)",
+      "opakowania z papieru i tektury": "Emballages en papier et carton",
+      "opakowania ze szkła": "Emballages en verre",
+      "odpady ulegające biodegradacji": "Déchets biodégradables",
+      "odpady kuchenne ulegające biodegradacji": "Déchets de cuisine biodégradables",
+      "odpady wielkogabarytowe": "Encombrants"
     }
-  },
-  "fractions": {
-    "zmieszane odpady opakowaniowe": "Déchets d'emballage mélangés",
-    "niesegregowane (zmieszane) odpady komunalne": "Déchets municipaux non triés (mélangés)",
-    "opakowania z papieru i tektury": "Emballages en papier et carton",
-    "opakowania ze szkła": "Emballages en verre",
-    "odpady ulegające biodegradacji": "Déchets biodégradables",
-    "odpady kuchenne ulegające biodegradacji": "Déchets de cuisine biodégradables",
-    "odpady wielkogabarytowe": "Encombrants"
   }
 }
 

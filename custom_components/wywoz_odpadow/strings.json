@@ -36,16 +36,16 @@
     },
     "abort": {
       "already_configured": "Integracja jest już skonfigurowana"
+    },
+    "fractions": {
+      "zmieszane odpady opakowaniowe": "Zmieszane odpady opakowaniowe",
+      "niesegregowane (zmieszane) odpady komunalne": "Niesegregowane (zmieszane) odpady komunalne",
+      "opakowania z papieru i tektury": "Opakowania z papieru i tektury",
+      "opakowania ze szkła": "Opakowania ze szkła",
+      "odpady ulegające biodegradacji": "Odpady ulegające biodegradacji",
+      "odpady kuchenne ulegające biodegradacji": "Odpady kuchenne ulegające biodegradacji",
+      "odpady wielkogabarytowe": "Odpady wielkogabarytowe"
     }
-  },
-  "fractions": {
-    "zmieszane odpady opakowaniowe": "Zmieszane odpady opakowaniowe",
-    "niesegregowane (zmieszane) odpady komunalne": "Niesegregowane (zmieszane) odpady komunalne",
-    "opakowania z papieru i tektury": "Opakowania z papieru i tektury",
-    "opakowania ze szkła": "Opakowania ze szkła",
-    "odpady ulegające biodegradacji": "Odpady ulegające biodegradacji",
-    "odpady kuchenne ulegające biodegradacji": "Odpady kuchenne ulegające biodegradacji",
-    "odpady wielkogabarytowe": "Odpady wielkogabarytowe"
   }
 }
 

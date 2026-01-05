@@ -36,16 +36,16 @@
     },
     "abort": {
       "already_configured": "集成已配置"
+    },
+    "fractions": {
+      "zmieszane odpady opakowaniowe": "混合包装废物",
+      "niesegregowane (zmieszane) odpady komunalne": "未分类（混合）城市废物",
+      "opakowania z papieru i tektury": "纸和纸板包装",
+      "opakowania ze szkła": "玻璃包装",
+      "odpady ulegające biodegradacji": "可生物降解废物",
+      "odpady kuchenne ulegające biodegradacji": "厨房可生物降解废物",
+      "odpady wielkogabarytowe": "大件废物"
     }
-  },
-  "fractions": {
-    "zmieszane odpady opakowaniowe": "混合包装废物",
-    "niesegregowane (zmieszane) odpady komunalne": "未分类（混合）城市废物",
-    "opakowania z papieru i tektury": "纸和纸板包装",
-    "opakowania ze szkła": "玻璃包装",
-    "odpady ulegające biodegradacji": "可生物降解废物",
-    "odpady kuchenne ulegające biodegradacji": "厨房可生物降解废物",
-    "odpady wielkogabarytowe": "大件废物"
   }
 }
 

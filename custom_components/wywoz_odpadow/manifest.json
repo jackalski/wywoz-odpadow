@@ -1,13 +1,13 @@
 {
   "domain": "wywoz_odpadow",
   "name": "Wywóz Odpadów",
-  "version": "1.0.0",
-  "config_flow": true,
-  "documentation": "https://github.com/jackalski/wywoz-odpadow",
-  "issue_tracker": "https://github.com/jackalski/wywoz-odpadow/issues",
   "codeowners": ["@jackalski"],
-  "requirements": ["aiohttp>=3.8.0"],
+  "config_flow": true,
   "dependencies": ["calendar"],
-  "iot_class": "cloud_polling"
+  "documentation": "https://github.com/jackalski/wywoz-odpadow",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jackalski/wywoz-odpadow/issues",
+  "requirements": ["aiohttp>=3.8.0"],
+  "version": "1.0.0"
 }
 

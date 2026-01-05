@@ -36,16 +36,16 @@
     },
     "abort": {
       "already_configured": "Tích hợp đã được cấu hình"
+    },
+    "fractions": {
+      "zmieszane odpady opakowaniowe": "Chất thải bao bì hỗn hợp",
+      "niesegregowane (zmieszane) odpady komunalne": "Chất thải đô thị không phân loại (hỗn hợp)",
+      "opakowania z papieru i tektury": "Bao bì giấy và bìa cứng",
+      "opakowania ze szkła": "Bao bì thủy tinh",
+      "odpady ulegające biodegradacji": "Chất thải có thể phân hủy sinh học",
+      "odpady kuchenne ulegające biodegradacji": "Chất thải nhà bếp có thể phân hủy sinh học",
+      "odpady wielkogabarytowe": "Chất thải cỡ lớn"
     }
-  },
-  "fractions": {
-    "zmieszane odpady opakowaniowe": "Chất thải bao bì hỗn hợp",
-    "niesegregowane (zmieszane) odpady komunalne": "Chất thải đô thị không phân loại (hỗn hợp)",
-    "opakowania z papieru i tektury": "Bao bì giấy và bìa cứng",
-    "opakowania ze szkła": "Bao bì thủy tinh",
-    "odpady ulegające biodegradacji": "Chất thải có thể phân hủy sinh học",
-    "odpady kuchenne ulegające biodegradacji": "Chất thải nhà bếp có thể phân hủy sinh học",
-    "odpady wielkogabarytowe": "Chất thải cỡ lớn"
   }
 }
 
