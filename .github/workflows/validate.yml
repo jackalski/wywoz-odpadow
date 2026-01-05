@@ -27,7 +27,7 @@ jobs:
           python -c "import json; json.load(open('custom_components/wywoz_odpadow/manifest.json'))"
       - name: Validate hacs.json
         run: |
-          python -c "import json; json.load(open('custom_components/wywoz_odpadow/hacs.json'))"
+          python -c "import json; json.load(open('hacs.json'))"
       - name: Check translations
         run: |
           python -c "import json, os; [json.load(open(f'custom_components/wywoz_odpadow/translations/{f}')) for f in os.listdir('custom_components/wywoz_odpadow/translations') if f.endswith('.json')]"
