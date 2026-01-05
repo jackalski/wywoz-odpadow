@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Поштовий індекс",
+        "description": "Введіть поштовий індекс у форматі ##-### (наприклад, 02-001)",
+        "data": {
+          "postal_code": "Поштовий індекс"
+        },
+        "data_description": {
+          "postal_code": "Введіть поштовий індекс у форматі ##-###, де # - цифра 0-9"
+        }
+      },
+      "address": {
+        "title": "Виберіть адресу",
+        "description": "Поштовий індекс: {postal_code}. Виберіть адресу зі списку доступних адрес для цього поштового індексу.",
+        "data": {
+          "address": "Виберіть адресу",
+          "update_interval": "Інтервал оновлення (у днях)"
+        },
+        "data_description": {
+          "address": "Виберіть адресу зі списку доступних адрес для даного поштового індексу",
+          "update_interval": "Інтервал оновлення даних у днях (1 - 7 днів)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Неможливо підключитися до API",
+      "invalid_data": "Невірні дані з API",
+      "unknown": "Неочікувана помилка",
+      "required": "Це поле обов'язкове",
+      "invalid_format": "Невірний формат. Введіть поштовий індекс у форматі ##-### (наприклад, 02-001)",
+      "no_addresses": "Адреси для даного поштового індексу не знайдено",
+      "invalid_selection": "Невірний вибір адреси",
+      "no_schedule_found": "Для даної адреси не знайдено актуального графіка"
+    },
+    "abort": {
+      "already_configured": "Інтеграція вже налаштована"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Змішані відходи упаковки",
+    "niesegregowane (zmieszane) odpady komunalne": "Невідсортовані (змішані) комунальні відходи",
+    "opakowania z papieru i tektury": "Упаковка з паперу та картону",
+    "opakowania ze szkła": "Скляна упаковка",
+    "odpady ulegające biodegradacji": "Біорозкладні відходи",
+    "odpady kuchenne ulegające biodegradacji": "Кухонні біорозкладні відходи",
+    "odpady wielkogabarytowe": "Великогабаритні відходи"
+  }
+}
+

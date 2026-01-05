@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Postal Code",
+        "description": "Enter postal code in format ##-### (e.g. 02-001)",
+        "data": {
+          "postal_code": "Postal Code"
+        },
+        "data_description": {
+          "postal_code": "Enter postal code in format ##-###, where # is a digit 0-9"
+        }
+      },
+      "address": {
+        "title": "Select Address",
+        "description": "Postal code: {postal_code}. Select an address from the list of available addresses for this postal code.",
+        "data": {
+          "address": "Select Address",
+          "update_interval": "Update Interval (in days)"
+        },
+        "data_description": {
+          "address": "Select an address from the list of available addresses for the given postal code",
+          "update_interval": "Data update interval in days (1 - 7 days)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to API",
+      "invalid_data": "Invalid data from API",
+      "unknown": "Unexpected error",
+      "required": "This field is required",
+      "invalid_format": "Invalid format. Enter postal code in format ##-### (e.g. 02-001)",
+      "no_addresses": "No addresses found for the given postal code",
+      "invalid_selection": "Invalid address selection",
+      "no_schedule_found": "No current schedule found for the given address"
+    },
+    "abort": {
+      "already_configured": "Integration is already configured"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Mixed packaging waste",
+    "niesegregowane (zmieszane) odpady komunalne": "Non-segregated (mixed) municipal waste",
+    "opakowania z papieru i tektury": "Paper and cardboard packaging",
+    "opakowania ze szkła": "Glass packaging",
+    "odpady ulegające biodegradacji": "Biodegradable waste",
+    "odpady kuchenne ulegające biodegradacji": "Kitchen biodegradable waste",
+    "odpady wielkogabarytowe": "Large-size waste"
+  }
+}
+

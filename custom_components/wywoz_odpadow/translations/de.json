@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Postleitzahl",
+        "description": "Geben Sie die Postleitzahl im Format ##-### ein (z.B. 02-001)",
+        "data": {
+          "postal_code": "Postleitzahl"
+        },
+        "data_description": {
+          "postal_code": "Geben Sie die Postleitzahl im Format ##-### ein, wobei # eine Ziffer 0-9 ist"
+        }
+      },
+      "address": {
+        "title": "Adresse auswählen",
+        "description": "Postleitzahl: {postal_code}. Wählen Sie eine Adresse aus der Liste der verfügbaren Adressen für diese Postleitzahl aus.",
+        "data": {
+          "address": "Adresse auswählen",
+          "update_interval": "Aktualisierungsintervall (in Tagen)"
+        },
+        "data_description": {
+          "address": "Wählen Sie eine Adresse aus der Liste der verfügbaren Adressen für die angegebene Postleitzahl aus",
+          "update_interval": "Datenaktualisierungsintervall in Tagen (1 - 7 Tage)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zur API nicht möglich",
+      "invalid_data": "Ungültige Daten von der API",
+      "unknown": "Unerwarteter Fehler",
+      "required": "Dieses Feld ist erforderlich",
+      "invalid_format": "Ungültiges Format. Geben Sie die Postleitzahl im Format ##-### ein (z.B. 02-001)",
+      "no_addresses": "Keine Adressen für die angegebene Postleitzahl gefunden",
+      "invalid_selection": "Ungültige Adressauswahl",
+      "no_schedule_found": "Für die angegebene Adresse wurde kein aktueller Zeitplan gefunden"
+    },
+    "abort": {
+      "already_configured": "Integration ist bereits konfiguriert"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Gemischte Verpackungsabfälle",
+    "niesegregowane (zmieszane) odpady komunalne": "Nicht getrennte (gemischte) Siedlungsabfälle",
+    "opakowania z papieru i tektury": "Papier- und Pappverpackungen",
+    "opakowania ze szkła": "Glasverpackungen",
+    "odpady ulegające biodegradacji": "Biologisch abbaubare Abfälle",
+    "odpady kuchenne ulegające biodegradacji": "Küchenabfälle biologisch abbaubar",
+    "odpady wielkogabarytowe": "Sperrmüll"
+  }
+}
+

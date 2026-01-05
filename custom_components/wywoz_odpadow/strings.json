@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kod pocztowy",
+        "description": "Wprowadź kod pocztowy w formacie ##-### (np. 02-001)",
+        "data": {
+          "postal_code": "Kod pocztowy"
+        },
+        "data_description": {
+          "postal_code": "Wprowadź kod pocztowy w formacie ##-###, gdzie # to cyfra 0-9"
+        }
+      },
+      "address": {
+        "title": "Wybierz adres",
+        "description": "Kod pocztowy: {postal_code}. Wybierz adres z listy dostępnych adresów dla tego kodu pocztowego.",
+        "data": {
+          "address": "Wybierz adres",
+          "update_interval": "Interwał aktualizacji (w dniach)"
+        },
+        "data_description": {
+          "address": "Wybierz adres z listy dostępnych adresów dla podanego kodu pocztowego",
+          "update_interval": "Interwał aktualizacji danych w dniach (1 - 7 dni)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z API",
+      "invalid_data": "Nieprawidłowe dane z API",
+      "unknown": "Nieoczekiwany błąd",
+      "required": "To pole jest wymagane",
+      "invalid_format": "Nieprawidłowy format. Wprowadź kod pocztowy w formacie ##-### (np. 02-001)",
+      "no_addresses": "Nie znaleziono adresów dla podanego kodu pocztowego",
+      "invalid_selection": "Nieprawidłowy wybór adresu",
+      "no_schedule_found": "Dla podanego adresu nie odnaleziono aktualnego harmonogramu"
+    },
+    "abort": {
+      "already_configured": "Integracja jest już skonfigurowana"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Zmieszane odpady opakowaniowe",
+    "niesegregowane (zmieszane) odpady komunalne": "Niesegregowane (zmieszane) odpady komunalne",
+    "opakowania z papieru i tektury": "Opakowania z papieru i tektury",
+    "opakowania ze szkła": "Opakowania ze szkła",
+    "odpady ulegające biodegradacji": "Odpady ulegające biodegradacji",
+    "odpady kuchenne ulegające biodegradacji": "Odpady kuchenne ulegające biodegradacji",
+    "odpady wielkogabarytowe": "Odpady wielkogabarytowe"
+  }
+}
+

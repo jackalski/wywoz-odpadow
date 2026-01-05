@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mã bưu điện",
+        "description": "Nhập mã bưu điện theo định dạng ##-### (ví dụ: 02-001)",
+        "data": {
+          "postal_code": "Mã bưu điện"
+        },
+        "data_description": {
+          "postal_code": "Nhập mã bưu điện theo định dạng ##-###, trong đó # là chữ số 0-9"
+        }
+      },
+      "address": {
+        "title": "Chọn địa chỉ",
+        "description": "Mã bưu điện: {postal_code}. Chọn địa chỉ từ danh sách các địa chỉ có sẵn cho mã bưu điện này.",
+        "data": {
+          "address": "Chọn địa chỉ",
+          "update_interval": "Khoảng thời gian cập nhật (tính bằng ngày)"
+        },
+        "data_description": {
+          "address": "Chọn địa chỉ từ danh sách các địa chỉ có sẵn cho mã bưu điện đã cho",
+          "update_interval": "Khoảng thời gian cập nhật dữ liệu tính bằng ngày (1 - 7 ngày)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Không thể kết nối với API",
+      "invalid_data": "Dữ liệu không hợp lệ từ API",
+      "unknown": "Lỗi không mong muốn",
+      "required": "Trường này là bắt buộc",
+      "invalid_format": "Định dạng không hợp lệ. Nhập mã bưu điện theo định dạng ##-### (ví dụ: 02-001)",
+      "no_addresses": "Không tìm thấy địa chỉ cho mã bưu điện đã cho",
+      "invalid_selection": "Lựa chọn địa chỉ không hợp lệ",
+      "no_schedule_found": "Không tìm thấy lịch trình hiện tại cho địa chỉ đã cho"
+    },
+    "abort": {
+      "already_configured": "Tích hợp đã được cấu hình"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Chất thải bao bì hỗn hợp",
+    "niesegregowane (zmieszane) odpady komunalne": "Chất thải đô thị không phân loại (hỗn hợp)",
+    "opakowania z papieru i tektury": "Bao bì giấy và bìa cứng",
+    "opakowania ze szkła": "Bao bì thủy tinh",
+    "odpady ulegające biodegradacji": "Chất thải có thể phân hủy sinh học",
+    "odpady kuchenne ulegające biodegradacji": "Chất thải nhà bếp có thể phân hủy sinh học",
+    "odpady wielkogabarytowe": "Chất thải cỡ lớn"
+  }
+}
+

@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Code postal",
+        "description": "Entrez le code postal au format ##-### (par exemple 02-001)",
+        "data": {
+          "postal_code": "Code postal"
+        },
+        "data_description": {
+          "postal_code": "Entrez le code postal au format ##-###, où # est un chiffre de 0 à 9"
+        }
+      },
+      "address": {
+        "title": "Sélectionner une adresse",
+        "description": "Code postal : {postal_code}. Sélectionnez une adresse dans la liste des adresses disponibles pour ce code postal.",
+        "data": {
+          "address": "Sélectionner une adresse",
+          "update_interval": "Intervalle de mise à jour (en jours)"
+        },
+        "data_description": {
+          "address": "Sélectionnez une adresse dans la liste des adresses disponibles pour le code postal donné",
+          "update_interval": "Intervalle de mise à jour des données en jours (1 - 7 jours)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter à l'API",
+      "invalid_data": "Données invalides de l'API",
+      "unknown": "Erreur inattendue",
+      "required": "Ce champ est obligatoire",
+      "invalid_format": "Format invalide. Entrez le code postal au format ##-### (par exemple 02-001)",
+      "no_addresses": "Aucune adresse trouvée pour le code postal donné",
+      "invalid_selection": "Sélection d'adresse invalide",
+      "no_schedule_found": "Aucun calendrier actuel trouvé pour l'adresse donnée"
+    },
+    "abort": {
+      "already_configured": "L'intégration est déjà configurée"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Déchets d'emballage mélangés",
+    "niesegregowane (zmieszane) odpady komunalne": "Déchets municipaux non triés (mélangés)",
+    "opakowania z papieru i tektury": "Emballages en papier et carton",
+    "opakowania ze szkła": "Emballages en verre",
+    "odpady ulegające biodegradacji": "Déchets biodégradables",
+    "odpady kuchenne ulegające biodegradacji": "Déchets de cuisine biodégradables",
+    "odpady wielkogabarytowe": "Encombrants"
+  }
+}
+

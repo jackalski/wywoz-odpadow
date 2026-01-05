@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "邮政编码",
+        "description": "输入格式为 ##-### 的邮政编码（例如 02-001）",
+        "data": {
+          "postal_code": "邮政编码"
+        },
+        "data_description": {
+          "postal_code": "输入格式为 ##-### 的邮政编码，其中 # 是数字 0-9"
+        }
+      },
+      "address": {
+        "title": "选择地址",
+        "description": "邮政编码：{postal_code}。从此邮政编码的可用地址列表中选择地址。",
+        "data": {
+          "address": "选择地址",
+          "update_interval": "更新间隔（天数）"
+        },
+        "data_description": {
+          "address": "从给定邮政编码的可用地址列表中选择地址",
+          "update_interval": "数据更新间隔（天数）（1 - 7 天）"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接到 API",
+      "invalid_data": "API 返回的数据无效",
+      "unknown": "意外错误",
+      "required": "此字段为必填项",
+      "invalid_format": "格式无效。请输入格式为 ##-### 的邮政编码（例如 02-001）",
+      "no_addresses": "未找到给定邮政编码的地址",
+      "invalid_selection": "地址选择无效",
+      "no_schedule_found": "未找到给定地址的当前时间表"
+    },
+    "abort": {
+      "already_configured": "集成已配置"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "混合包装废物",
+    "niesegregowane (zmieszane) odpady komunalne": "未分类（混合）城市废物",
+    "opakowania z papieru i tektury": "纸和纸板包装",
+    "opakowania ze szkła": "玻璃包装",
+    "odpady ulegające biodegradacji": "可生物降解废物",
+    "odpady kuchenne ulegające biodegradacji": "厨房可生物降解废物",
+    "odpady wielkogabarytowe": "大件废物"
+  }
+}
+

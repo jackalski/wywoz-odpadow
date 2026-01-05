@@ -1,0 +1,29 @@
+{
+  "name": "wywoz-odpadow",
+  "version": "1.0.0",
+  "description": "Home Assistant integration for Warsaw waste collection schedules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackalski/wywoz-odpadow.git"
+  },
+  "keywords": [
+    "home-assistant",
+    "homeassistant",
+    "hacs",
+    "waste",
+    "trash",
+    "warsaw",
+    "poland"
+  ],
+  "author": "@jackalski",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jackalski/wywoz-odpadow/issues"
+  },
+  "homepage": "https://github.com/jackalski/wywoz-odpadow#readme"
+}
+

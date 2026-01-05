@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Паштовы індэкс",
+        "description": "Увядзіце паштовы індэкс у фармаце ##-### (напрыклад, 02-001)",
+        "data": {
+          "postal_code": "Паштовы індэкс"
+        },
+        "data_description": {
+          "postal_code": "Увядзіце паштовы індэкс у фармаце ##-###, дзе # - лічба 0-9"
+        }
+      },
+      "address": {
+        "title": "Выберыце адрас",
+        "description": "Паштовы індэкс: {postal_code}. Выберыце адрас са спісу даступных адрасоў для гэтага паштовага індэкса.",
+        "data": {
+          "address": "Выберыце адрас",
+          "update_interval": "Інтэрвал абнаўлення (у днях)"
+        },
+        "data_description": {
+          "address": "Выберыце адрас са спісу даступных адрасоў для дадзенага паштовага індэкса",
+          "update_interval": "Інтэрвал абнаўлення даных у днях (1 - 7 дзён)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Немагчыма падключыцца да API",
+      "invalid_data": "Несапраўдныя даныя з API",
+      "unknown": "Нечаканая памылка",
+      "required": "Гэта поле абавязковае",
+      "invalid_format": "Несапраўдны фармат. Увядзіце паштовы індэкс у фармаце ##-### (напрыклад, 02-001)",
+      "no_addresses": "Адрасы для дадзенага паштовага індэкса не знойдзены",
+      "invalid_selection": "Несапраўдны выбар адраса",
+      "no_schedule_found": "Для дадзенага адраса не знойдзены актуальны графік"
+    },
+    "abort": {
+      "already_configured": "Інтэграцыя ўжо настроена"
+    }
+  },
+  "fractions": {
+    "zmieszane odpady opakowaniowe": "Змешаныя адходы ўпакоўкі",
+    "niesegregowane (zmieszane) odpady komunalne": "Несартыраваныя (змешаныя) камунальныя адходы",
+    "opakowania z papieru i tektury": "Упакоўка з паперы і кардону",
+    "opakowania ze szkła": "Шкляная ўпакоўка",
+    "odpady ulegające biodegradacji": "Біяразградальныя адходы",
+    "odpady kuchenne ulegające biodegradacji": "Кухонныя біяразградальныя адходы",
+    "odpady wielkogabarytowe": "Вялікагабарытныя адходы"
+  }
+}
+
