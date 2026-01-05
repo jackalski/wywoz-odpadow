@@ -1,8 +1,5 @@
 {
   "name": "Wywóz Odpadów",
-  "render_readme": true,
-  "domains": ["calendar", "sensor"],
-  "iot_class": "Cloud Polling",
   "homeassistant": "2024.1.0"
 }
 
