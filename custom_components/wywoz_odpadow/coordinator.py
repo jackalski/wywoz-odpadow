@@ -266,15 +266,15 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
         try:
             # Get translations for the current language
             translations = await translation.async_get_translations(
-                self.hass, self.hass.config.language, "config", [DOMAIN]
+                self.hass, self.hass.config.language, "common", [DOMAIN]
             )
             if translations and DOMAIN in translations:
                 domain_translations = translations[DOMAIN]
-                # Get translations from config.fractions section (fractions is now inside config)
-                if "config" in domain_translations and isinstance(domain_translations["config"], dict):
-                    config_translations = domain_translations["config"]
-                    if "fractions" in config_translations:
-                        self._fraction_translations = config_translations["fractions"]
+                # Get translations from common.fractions section
+                if "common" in domain_translations and isinstance(domain_translations["common"], dict):
+                    common_translations = domain_translations["common"]
+                    if "fractions" in common_translations:
+                        self._fraction_translations = common_translations["fractions"]
         except Exception:
             # If translation loading fails, use empty dict (will return original names)
             self._fraction_translations = {}

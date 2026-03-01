@@ -1,4 +1,15 @@
 {
+  "common": {
+    "fractions": {
+      "zmieszane_odpady_opakowaniowe": "Déchets d'emballage mélangés",
+      "niesegregowane_zmieszane_odpady_komunalne": "Déchets municipaux non triés (mélangés)",
+      "opakowania_z_papieru_i_tektury": "Emballages en papier et carton",
+      "opakowania_ze_szkla": "Emballages en verre",
+      "odpady_ulegajace_biodegradacji": "Déchets biodégradables",
+      "odpady_kuchenne_ulegajace_biodegradacji": "Déchets de cuisine biodégradables",
+      "odpady_wielkogabarytowe": "Encombrants"
+    }
+  },
   "config": {
     "step": {
       "user": {
@@ -36,15 +47,6 @@
     },
     "abort": {
       "already_configured": "L'intégration est déjà configurée"
-    },
-    "fractions": {
-      "zmieszane_odpady_opakowaniowe": "Déchets d'emballage mélangés",
-      "niesegregowane_zmieszane_odpady_komunalne": "Déchets municipaux non triés (mélangés)",
-      "opakowania_z_papieru_i_tektury": "Emballages en papier et carton",
-      "opakowania_ze_szkla": "Emballages en verre",
-      "odpady_ulegajace_biodegradacji": "Déchets biodégradables",
-      "odpady_kuchenne_ulegajace_biodegradacji": "Déchets de cuisine biodégradables",
-      "odpady_wielkogabarytowe": "Encombrants"
     }
   }
 }

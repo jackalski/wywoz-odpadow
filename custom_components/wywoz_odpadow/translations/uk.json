@@ -1,4 +1,15 @@
 {
+  "common": {
+    "fractions": {
+      "zmieszane_odpady_opakowaniowe": "Змішані відходи упаковки",
+      "niesegregowane_zmieszane_odpady_komunalne": "Невідсортовані (змішані) комунальні відходи",
+      "opakowania_z_papieru_i_tektury": "Упаковка з паперу та картону",
+      "opakowania_ze_szkla": "Скляна упаковка",
+      "odpady_ulegajace_biodegradacji": "Біорозкладні відходи",
+      "odpady_kuchenne_ulegajace_biodegradacji": "Кухонні біорозкладні відходи",
+      "odpady_wielkogabarytowe": "Великогабаритні відходи"
+    }
+  },
   "config": {
     "step": {
       "user": {
@@ -36,15 +47,6 @@
     },
     "abort": {
       "already_configured": "Інтеграція вже налаштована"
-    },
-    "fractions": {
-      "zmieszane_odpady_opakowaniowe": "Змішані відходи упаковки",
-      "niesegregowane_zmieszane_odpady_komunalne": "Невідсортовані (змішані) комунальні відходи",
-      "opakowania_z_papieru_i_tektury": "Упаковка з паперу та картону",
-      "opakowania_ze_szkla": "Скляна упаковка",
-      "odpady_ulegajace_biodegradacji": "Біорозкладні відходи",
-      "odpady_kuchenne_ulegajace_biodegradacji": "Кухонні біорозкладні відходи",
-      "odpady_wielkogabarytowe": "Великогабаритні відходи"
     }
   }
 }

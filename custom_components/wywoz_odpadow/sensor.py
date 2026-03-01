@@ -23,16 +23,31 @@ async def async_setup_entry(
     """Set up the Wywóz Odpadów sensor platform."""
     coordinator: WywozOdpadowDataUpdateCoordinator = hass.data[DOMAIN][entry.entry_id]
 
-    async_add_entities([WywozOdpadowSensor(coordinator, entry)])
+    entities: list[SensorEntity] = []
+
+    fractions = {}
+    if coordinator.data and coordinator.data.get("fractions"):
+        fractions = coordinator.data["fractions"]
+
+    for fraction_id, fraction_data in fractions.items():
+        entities.append(
+            WywozOdpadowFractionSensor(
+                coordinator,
+                entry,
+                fraction_id,
+                fraction_data.get("name", str(fraction_id)),
+            )
+        )
+
+    async_add_entities(entities)
 
 
-class WywozOdpadowSensor(
+class WywozOdpadowFractionSensor(
     CoordinatorEntity[WywozOdpadowDataUpdateCoordinator], SensorEntity
 ):
-    """Representation of a Wywóz Odpadów sensor."""
+    """Representation of a Wywóz Odpadów fraction sensor."""
 
     _attr_has_entity_name = True
-    _attr_name = "Wywóz Odpadów"
     _attr_native_unit_of_measurement = "dni"
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_icon = "mdi:trash-can"
@@ -41,10 +56,14 @@ class WywozOdpadowSensor(
         self,
         coordinator: WywozOdpadowDataUpdateCoordinator,
         entry: ConfigEntry,
+        fraction_id: str,
+        fraction_name: str,
     ) -> None:
-        """Initialize the sensor."""
+        """Initialize the fraction sensor."""
         super().__init__(coordinator)
-        self._attr_unique_id = f"{entry.entry_id}_sensor"
+        self._fraction_id = fraction_id
+        self._attr_unique_id = f"{entry.entry_id}_fraction_{fraction_id}"
+        self._attr_name = fraction_name
         self._entry = entry
         # Device name will be set from coordinator data or entry title
         self._attr_device_info = {
@@ -63,10 +82,10 @@ class WywozOdpadowSensor(
         else:
             # Fallback to entry title if data not yet loaded
             address = self._entry.title
-        
+
         if not address:
             address = f"Wywóz Odpadów ({self.coordinator.address_point_id})"
-        
+
         return {
             "identifiers": {(DOMAIN, self._entry.entry_id)},
             "name": address,
@@ -79,30 +98,26 @@ class WywozOdpadowSensor(
         if not self.coordinator.data or not self.coordinator.data.get("fractions"):
             return None
 
-        fractions = self.coordinator.data["fractions"]
-        if not fractions:
+        fraction = self.coordinator.data["fractions"].get(self._fraction_id)
+        if not fraction:
             return None
 
-        # Find the minimum days_until across all fractions
-        min_days = None
-        for fraction_data in fractions.values():
-            days_until = fraction_data.get("days_until")
-            if days_until is not None:
-                if min_days is None or days_until < min_days:
-                    min_days = days_until
-
-        return min_days
+        return fraction.get("days_until")
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         """Return the state attributes."""
         attributes: dict[str, Any] = {}
-        
-        # Add update interval information in days only
-        if hasattr(self.coordinator, "_update_interval_seconds"):
-            update_interval_seconds = self.coordinator._update_interval_seconds
-            update_interval_days = round(update_interval_seconds / 86400, 2)
-            attributes["update_interval"] = update_interval_days
+
+        if not self.coordinator.data or not self.coordinator.data.get("fractions"):
+            return attributes
+
+        fraction = self.coordinator.data["fractions"].get(self._fraction_id)
+        if not fraction:
+            return attributes
+
+        attributes["fraction_id"] = self._fraction_id
+        attributes["fraction_type"] = fraction.get("type")
+        attributes["next_date"] = fraction.get("next_date")
 
         return attributes
-

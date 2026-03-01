@@ -288,7 +288,15 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 }
                 _LOGGER.debug("Loaded %s addresses", len(self.address_options))
             else:
-                errors["base"] = "no_addresses"
+                return self.async_show_form(
+                    step_id="user",
+                    data_schema=vol.Schema(
+                        {
+                            vol.Required(CONF_POSTAL_CODE): str,
+                        }
+                    ),
+                    errors={"base": "no_addresses"},
+                )
 
         if user_input is not None:
             selected_address_id = user_input.get("address", "").strip()
