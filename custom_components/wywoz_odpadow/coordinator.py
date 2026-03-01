@@ -270,11 +270,14 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
             )
             if translations and DOMAIN in translations:
                 domain_translations = translations[DOMAIN]
-                # Get translations from common.fractions section
+                # Get fraction translations from common.fraction_* keys (flat structure required by HA)
                 if "common" in domain_translations and isinstance(domain_translations["common"], dict):
                     common_translations = domain_translations["common"]
-                    if "fractions" in common_translations:
-                        self._fraction_translations = common_translations["fractions"]
+                    self._fraction_translations = {
+                        k[9:]: v
+                        for k, v in common_translations.items()
+                        if k.startswith("fraction_") and isinstance(v, str)
+                    }
         except Exception:
             # If translation loading fails, use empty dict (will return original names)
             self._fraction_translations = {}
