@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 2025-03-02
+
+### Fixed
+- **Sensors**: Fraction sensors now show the translated fraction name (e.g. "Paper and cardboard packaging" instead of raw API name). Name is read from coordinator data and updated on refresh.
+- **Translations**: Coordinator now loads fraction translations from both nested (`common.fraction_OP`) and flat (`common.fraction_OP` in some HA versions) translation structures.
+
+---
+
 ## [1.2.0] - 2025-03-02
 
 ### Changed

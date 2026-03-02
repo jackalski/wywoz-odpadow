@@ -262,24 +262,26 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
 
     async def _load_fraction_translations(self) -> None:
         """Load fraction translations from Home Assistant translations."""
+        self._fraction_translations = {}
         try:
-            # Get translations for the current language
             translations = await translation.async_get_translations(
                 self.hass, self.hass.config.language, "common", [DOMAIN]
             )
-            if translations and DOMAIN in translations:
-                domain_translations = translations[DOMAIN]
-                # Get fraction translations from common.fraction_* keys (flat structure required by HA)
-                if "common" in domain_translations and isinstance(domain_translations["common"], dict):
-                    common_translations = domain_translations["common"]
-                    self._fraction_translations = {
-                        k[9:]: v
-                        for k, v in common_translations.items()
-                        if k.startswith("fraction_") and isinstance(v, str)
-                    }
+            if not translations or DOMAIN not in translations:
+                return
+            domain_translations = translations[DOMAIN]
+            # Nested: domain["common"]["fraction_OP"]
+            if "common" in domain_translations and isinstance(domain_translations["common"], dict):
+                for k, v in domain_translations["common"].items():
+                    if k.startswith("fraction_") and isinstance(v, str):
+                        self._fraction_translations[k[9:]] = v
+            # Flat: domain["common.fraction_OP"] (some HA versions)
+            for k, v in domain_translations.items():
+                if isinstance(k, str) and k.startswith("common.fraction_") and isinstance(v, str):
+                    fraction_id = k.replace("common.fraction_", "", 1)
+                    self._fraction_translations.setdefault(fraction_id, v)
         except Exception:
-            # If translation loading fails, use empty dict (will return original names)
-            self._fraction_translations = {}
+            pass
 
     def _translate_fraction(self, fraction_id: str, fraction_name: str) -> str:
         """Translate fraction by id_frakcja using loaded translations; fallback to API name."""

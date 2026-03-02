@@ -65,12 +65,28 @@ class WywozOdpadowFractionSensor(
         self._attr_unique_id = f"{entry.entry_id}_fraction_{fraction_id}"
         self._attr_name = fraction_name
         self._entry = entry
-        # Device name will be set from coordinator data or entry title
         self._attr_device_info = {
             "identifiers": {(DOMAIN, entry.entry_id)},
-            "name": None,  # Will be set from coordinator data
+            "name": None,
             "manufacturer": "Warszawa 19115",
         }
+
+    @property
+    def name(self) -> str | None:
+        """Return the translated fraction name from coordinator data."""
+        if self.coordinator.data and self.coordinator.data.get("fractions"):
+            frac = self.coordinator.data["fractions"].get(self._fraction_id)
+            if frac and frac.get("name"):
+                return frac["name"]
+        return self._attr_name or self._fraction_id
+
+    def _handle_coordinator_update(self) -> None:
+        """Update entity name from coordinator when data refreshes."""
+        if self.coordinator.data and self.coordinator.data.get("fractions"):
+            frac = self.coordinator.data["fractions"].get(self._fraction_id)
+            if frac and frac.get("name"):
+                self._attr_name = frac["name"]
+        super()._handle_coordinator_update()
 
     @property
     def device_info(self) -> dict[str, Any]:
