@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "Upakoŭka z papieru i kardonu",
-    "fraction_MT": "Zmiešanyja adchody ŭpakouki",
-    "fraction_OS": "Škłanaja upakoŭka",
-    "fraction_OZ": "Biarazhradainyja adchody",
-    "fraction_BK": "Kuchonnyja biarazhradainyja adchody",
-    "fraction_WG": "Vialikahabarytnyja adchody",
-    "fraction_ZM": "Niesartyravanyja (zmiešanyja) kamunalnyja adchody"
+    "fraction_op": "Upakoŭka z papieru i kardonu",
+    "fraction_mt": "Zmiešanyja adchody ŭpakouki",
+    "fraction_os": "Škłanaja upakoŭka",
+    "fraction_oz": "Biarazhradainyja adchody",
+    "fraction_bk": "Kuchonnyja biarazhradainyja adchody",
+    "fraction_wg": "Vialikahabarytnyja adchody",
+    "fraction_zm": "Niesartyravanyja (zmiešanyja) kamunalnyja adchody"
   },
   "config": {
     "step": {

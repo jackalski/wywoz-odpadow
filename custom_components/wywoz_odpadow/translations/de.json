@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "Papier- und Pappverpackungen",
-    "fraction_MT": "Gemischte Verpackungsabfälle",
-    "fraction_OS": "Glasverpackungen",
-    "fraction_OZ": "Biologisch abbaubare Abfälle",
-    "fraction_BK": "Küchenabfälle biologisch abbaubar",
-    "fraction_WG": "Sperrmüll",
-    "fraction_ZM": "Nicht getrennte (gemischte) Siedlungsabfälle"
+    "fraction_op": "Papier- und Pappverpackungen",
+    "fraction_mt": "Gemischte Verpackungsabfälle",
+    "fraction_os": "Glasverpackungen",
+    "fraction_oz": "Biologisch abbaubare Abfälle",
+    "fraction_bk": "Küchenabfälle biologisch abbaubar",
+    "fraction_wg": "Sperrmüll",
+    "fraction_zm": "Nicht getrennte (gemischte) Siedlungsabfälle"
   },
   "config": {
     "step": {

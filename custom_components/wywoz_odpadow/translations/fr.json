@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "Emballages en papier et carton",
-    "fraction_MT": "Déchets d'emballage mélangés",
-    "fraction_OS": "Emballages en verre",
-    "fraction_OZ": "Déchets biodégradables",
-    "fraction_BK": "Déchets de cuisine biodégradables",
-    "fraction_WG": "Encombrants",
-    "fraction_ZM": "Déchets municipaux non triés (mélangés)"
+    "fraction_op": "Emballages en papier et carton",
+    "fraction_mt": "Déchets d'emballage mélangés",
+    "fraction_os": "Emballages en verre",
+    "fraction_oz": "Déchets biodégradables",
+    "fraction_bk": "Déchets de cuisine biodégradables",
+    "fraction_wg": "Encombrants",
+    "fraction_zm": "Déchets municipaux non triés (mélangés)"
   },
   "config": {
     "step": {

@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "Bao bì giấy và bìa cứng",
-    "fraction_MT": "Chất thải bao bì hỗn hợp",
-    "fraction_OS": "Bao bì thủy tinh",
-    "fraction_OZ": "Chất thải có thể phân hủy sinh học",
-    "fraction_BK": "Chất thải nhà bếp có thể phân hủy sinh học",
-    "fraction_WG": "Chất thải cỡ lớn",
-    "fraction_ZM": "Chất thải đô thị không phân loại (hỗn hợp)"
+    "fraction_op": "Bao bì giấy và bìa cứng",
+    "fraction_mt": "Chất thải bao bì hỗn hợp",
+    "fraction_os": "Bao bì thủy tinh",
+    "fraction_oz": "Chất thải có thể phân hủy sinh học",
+    "fraction_bk": "Chất thải nhà bếp có thể phân hủy sinh học",
+    "fraction_wg": "Chất thải cỡ lớn",
+    "fraction_zm": "Chất thải đô thị không phân loại (hỗn hợp)"
   },
   "config": {
     "step": {

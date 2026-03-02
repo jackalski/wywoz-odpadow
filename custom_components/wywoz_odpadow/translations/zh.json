@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "纸和纸板包装",
-    "fraction_MT": "混合包装废物",
-    "fraction_OS": "玻璃包装",
-    "fraction_OZ": "可生物降解废物",
-    "fraction_BK": "厨房可生物降解废物",
-    "fraction_WG": "大件废物",
-    "fraction_ZM": "未分类（混合）城市废物"
+    "fraction_op": "纸和纸板包装",
+    "fraction_mt": "混合包装废物",
+    "fraction_os": "玻璃包装",
+    "fraction_oz": "可生物降解废物",
+    "fraction_bk": "厨房可生物降解废物",
+    "fraction_wg": "大件废物",
+    "fraction_zm": "未分类（混合）城市废物"
   },
   "config": {
     "step": {

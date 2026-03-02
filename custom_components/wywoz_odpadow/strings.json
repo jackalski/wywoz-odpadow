@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_OP": "Opakowania z papieru i tektury",
-    "fraction_MT": "Zmieszane odpady opakowaniowe",
-    "fraction_OS": "Opakowania ze szkła",
-    "fraction_OZ": "Odpady ulegające biodegradacji",
-    "fraction_BK": "Odpady kuchenne ulegające biodegradacji",
-    "fraction_WG": "Odpady wielkogabarytowe",
-    "fraction_ZM": "Niesegregowane (zmieszane) odpady komunalne"
+    "fraction_op": "Opakowania z papieru i tektury",
+    "fraction_mt": "Zmieszane odpady opakowaniowe",
+    "fraction_os": "Opakowania ze szkła",
+    "fraction_oz": "Odpady ulegające biodegradacji",
+    "fraction_bk": "Odpady kuchenne ulegające biodegradacji",
+    "fraction_wg": "Odpady wielkogabarytowe",
+    "fraction_zm": "Niesegregowane (zmieszane) odpady komunalne"
   },
   "config": {
     "step": {
