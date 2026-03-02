@@ -33,14 +33,14 @@ CONF_ADDRESS_POINT_ID = "address_point_id"
 CONF_UPDATE_INTERVAL = "update_interval"
 CONF_POSTAL_CODE = "postal_code"
 
-# Fraction type mappings for TrashCard compatibility
+# Fraction type mappings for TrashCard (key = id_frakcja from API)
 FRACTION_TYPE_MAPPING = {
-    "zmieszane odpady opakowaniowe": "waste",
-    "niesegregowane (zmieszane) odpady komunalne": "waste",
-    "opakowania z papieru i tektury": "paper",
-    "opakowania ze szkła": "recycle",
-    "odpady ulegające biodegradacji": "organic",
-    "odpady kuchenne ulegające biodegradacji": "organic",
-    "odpady wielkogabarytowe": "others",
+    "OP": "paper",   # opakowania z papieru i tektury
+    "MT": "waste",   # zmieszane odpady opakowaniowe
+    "OS": "recycle", # opakowania ze szkła
+    "OZ": "organic", # odpady ulegające biodegradacji
+    "BK": "organic", # odpady kuchenne ulegające biodegradacji
+    "WG": "others", # odpady wielkogabarytowe
+    "ZM": "waste",   # niesegregowane (zmieszane) odpady komunalne
 }
 

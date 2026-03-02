@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_zmieszane_odpady_opakowaniowe": "Mixed packaging waste",
-    "fraction_niesegregowane_zmieszane_odpady_komunalne": "Non-segregated (mixed) municipal waste",
-    "fraction_opakowania_z_papieru_i_tektury": "Paper and cardboard packaging",
-    "fraction_opakowania_ze_szkla": "Glass packaging",
-    "fraction_odpady_ulegajace_biodegradacji": "Biodegradable waste",
-    "fraction_odpady_kuchenne_ulegajace_biodegradacji": "Kitchen biodegradable waste",
-    "fraction_odpady_wielkogabarytowe": "Large-size waste"
+    "fraction_OP": "Paper and cardboard packaging",
+    "fraction_MT": "Mixed packaging waste",
+    "fraction_OS": "Glass packaging",
+    "fraction_OZ": "Biodegradable waste",
+    "fraction_BK": "Kitchen biodegradable waste",
+    "fraction_WG": "Large-size waste",
+    "fraction_ZM": "Non-segregated (mixed) municipal waste"
   },
   "config": {
     "step": {

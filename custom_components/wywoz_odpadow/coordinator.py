@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import re
 from datetime import datetime, timedelta
 from typing import Any
 
@@ -212,8 +211,8 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
                 _LOGGER.warning(f"Invalid date format: {event_date_str}")
                 continue
 
-            # Translate fraction name
-            translated_name = self._translate_fraction_name(fraction_name)
+            # Translate fraction by id_frakcja
+            translated_name = self._translate_fraction(fraction_id, fraction_name)
             
             # Only include future events or today
             if event_date >= now:
@@ -233,7 +232,7 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
                 fractions[fraction_id] = {
                     "id": fraction_id,
                     "name": translated_name,
-                    "type": FRACTION_TYPE_MAPPING.get(fraction_name, "custom"),
+                    "type": FRACTION_TYPE_MAPPING.get(fraction_id, "custom"),
                     "next_date": None,
                     "days_until": None,
                 }
@@ -282,26 +281,7 @@ class WywozOdpadowDataUpdateCoordinator(DataUpdateCoordinator):
             # If translation loading fails, use empty dict (will return original names)
             self._fraction_translations = {}
 
-    def _fraction_name_to_snake_case(self, fraction_name: str) -> str:
-        """Convert fraction name from API to snake_case key for translations."""
-        # Convert to lowercase, replace spaces and special chars with underscores
-        # Remove parentheses and their content, then clean up multiple underscores
-        key = fraction_name.lower()
-        # Remove parentheses and their content
-        key = re.sub(r'\s*\([^)]*\)\s*', '_', key)
-        # Replace spaces and special characters with underscores
-        key = re.sub(r'[^a-z0-9]+', '_', key)
-        # Remove multiple consecutive underscores
-        key = re.sub(r'_+', '_', key)
-        # Remove leading/trailing underscores
-        key = key.strip('_')
-        return key
-
-    def _translate_fraction_name(self, fraction_name: str) -> str:
-        """Translate fraction name using loaded translations."""
-        # Convert fraction name to snake_case key
-        snake_case_key = self._fraction_name_to_snake_case(fraction_name)
-        # Look up translation using snake_case key
-        translated = self._fraction_translations.get(snake_case_key, fraction_name)
-        return translated
+    def _translate_fraction(self, fraction_id: str, fraction_name: str) -> str:
+        """Translate fraction by id_frakcja using loaded translations; fallback to API name."""
+        return self._fraction_translations.get(fraction_id, fraction_name)
 

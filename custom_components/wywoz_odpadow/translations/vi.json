@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_zmieszane_odpady_opakowaniowe": "Chất thải bao bì hỗn hợp",
-    "fraction_niesegregowane_zmieszane_odpady_komunalne": "Chất thải đô thị không phân loại (hỗn hợp)",
-    "fraction_opakowania_z_papieru_i_tektury": "Bao bì giấy và bìa cứng",
-    "fraction_opakowania_ze_szkla": "Bao bì thủy tinh",
-    "fraction_odpady_ulegajace_biodegradacji": "Chất thải có thể phân hủy sinh học",
-    "fraction_odpady_kuchenne_ulegajace_biodegradacji": "Chất thải nhà bếp có thể phân hủy sinh học",
-    "fraction_odpady_wielkogabarytowe": "Chất thải cỡ lớn"
+    "fraction_OP": "Bao bì giấy và bìa cứng",
+    "fraction_MT": "Chất thải bao bì hỗn hợp",
+    "fraction_OS": "Bao bì thủy tinh",
+    "fraction_OZ": "Chất thải có thể phân hủy sinh học",
+    "fraction_BK": "Chất thải nhà bếp có thể phân hủy sinh học",
+    "fraction_WG": "Chất thải cỡ lớn",
+    "fraction_ZM": "Chất thải đô thị không phân loại (hỗn hợp)"
   },
   "config": {
     "step": {

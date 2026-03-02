@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_zmieszane_odpady_opakowaniowe": "Zmiešanyja adchody ŭpakouki",
-    "fraction_niesegregowane_zmieszane_odpady_komunalne": "Niesartyravanyja (zmiešanyja) kamunalnyja adchody",
-    "fraction_opakowania_z_papieru_i_tektury": "Upakoŭka z papieru i kardonu",
-    "fraction_opakowania_ze_szkla": "Škłanaja upakoŭka",
-    "fraction_odpady_ulegajace_biodegradacji": "Biarazhradainyja adchody",
-    "fraction_odpady_kuchenne_ulegajace_biodegradacji": "Kuchonnyja biarazhradainyja adchody",
-    "fraction_odpady_wielkogabarytowe": "Vialikahabarytnyja adchody"
+    "fraction_OP": "Upakoŭka z papieru i kardonu",
+    "fraction_MT": "Zmiešanyja adchody ŭpakouki",
+    "fraction_OS": "Škłanaja upakoŭka",
+    "fraction_OZ": "Biarazhradainyja adchody",
+    "fraction_BK": "Kuchonnyja biarazhradainyja adchody",
+    "fraction_WG": "Vialikahabarytnyja adchody",
+    "fraction_ZM": "Niesartyravanyja (zmiešanyja) kamunalnyja adchody"
   },
   "config": {
     "step": {

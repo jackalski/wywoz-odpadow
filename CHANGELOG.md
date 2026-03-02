@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-03-02
+
+### Changed
+- **Translations**: Fraction keys now use API `id_frakcja` (OP, MT, OS, OZ, BK, WG, ZM) instead of snake_case names derived from `nazwa`
+- **Coordinator**: Translates by `fraction_id` with fallback to API name; removed `_fraction_name_to_snake_case`
+- **TrashCard**: `FRACTION_TYPE_MAPPING` in `const.py` is now keyed by `id_frakcja` for stable type mapping
+
+---
+
 ## [1.1.0] - 2025-03-02
 
 ### Fixed

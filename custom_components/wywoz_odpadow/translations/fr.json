@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_zmieszane_odpady_opakowaniowe": "Déchets d'emballage mélangés",
-    "fraction_niesegregowane_zmieszane_odpady_komunalne": "Déchets municipaux non triés (mélangés)",
-    "fraction_opakowania_z_papieru_i_tektury": "Emballages en papier et carton",
-    "fraction_opakowania_ze_szkla": "Emballages en verre",
-    "fraction_odpady_ulegajace_biodegradacji": "Déchets biodégradables",
-    "fraction_odpady_kuchenne_ulegajace_biodegradacji": "Déchets de cuisine biodégradables",
-    "fraction_odpady_wielkogabarytowe": "Encombrants"
+    "fraction_OP": "Emballages en papier et carton",
+    "fraction_MT": "Déchets d'emballage mélangés",
+    "fraction_OS": "Emballages en verre",
+    "fraction_OZ": "Déchets biodégradables",
+    "fraction_BK": "Déchets de cuisine biodégradables",
+    "fraction_WG": "Encombrants",
+    "fraction_ZM": "Déchets municipaux non triés (mélangés)"
   },
   "config": {
     "step": {

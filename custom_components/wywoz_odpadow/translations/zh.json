@@ -1,12 +1,12 @@
 {
   "common": {
-    "fraction_zmieszane_odpady_opakowaniowe": "混合包装废物",
-    "fraction_niesegregowane_zmieszane_odpady_komunalne": "未分类（混合）城市废物",
-    "fraction_opakowania_z_papieru_i_tektury": "纸和纸板包装",
-    "fraction_opakowania_ze_szkla": "玻璃包装",
-    "fraction_odpady_ulegajace_biodegradacji": "可生物降解废物",
-    "fraction_odpady_kuchenne_ulegajace_biodegradacji": "厨房可生物降解废物",
-    "fraction_odpady_wielkogabarytowe": "大件废物"
+    "fraction_OP": "纸和纸板包装",
+    "fraction_MT": "混合包装废物",
+    "fraction_OS": "玻璃包装",
+    "fraction_OZ": "可生物降解废物",
+    "fraction_BK": "厨房可生物降解废物",
+    "fraction_WG": "大件废物",
+    "fraction_ZM": "未分类（混合）城市废物"
   },
   "config": {
     "step": {
