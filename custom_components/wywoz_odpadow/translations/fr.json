@@ -11,24 +11,24 @@
   "config": {
     "step": {
       "user": {
-        "title": "Code postal",
-        "description": "Entrez le code postal au format ##-### (par exemple 02-001)",
+        "title": "Rechercher une adresse",
+        "description": "Entrez une adresse ou un code postal pour rechercher un point d'adresse",
         "data": {
-          "postal_code": "Code postal"
+          "postal_code": "Adresse ou code postal"
         },
         "data_description": {
-          "postal_code": "Entrez le code postal au format ##-###, où # est un chiffre de 0 à 9"
+          "postal_code": "Entrez un nom de rue, un numéro de maison ou un code postal"
         }
       },
       "address": {
         "title": "Sélectionner une adresse",
-        "description": "Code postal : {postal_code}. Sélectionnez une adresse dans la liste des adresses disponibles pour ce code postal.",
+        "description": "Résultats de recherche pour : {postal_code}. Sélectionnez une adresse dans la liste.",
         "data": {
           "address": "Sélectionner une adresse",
           "update_interval": "Intervalle de mise à jour (en jours)"
         },
         "data_description": {
-          "address": "Sélectionnez une adresse dans la liste des adresses disponibles pour le code postal donné",
+          "address": "Sélectionnez une adresse dans les résultats de recherche",
           "update_interval": "Intervalle de mise à jour des données en jours (1 - 7 jours)"
         }
       }
@@ -38,8 +38,7 @@
       "invalid_data": "Données invalides de l'API",
       "unknown": "Erreur inattendue",
       "required": "Ce champ est obligatoire",
-      "invalid_format": "Format invalide. Entrez le code postal au format ##-### (par exemple 02-001)",
-      "no_addresses": "Aucune adresse trouvée pour le code postal donné",
+      "no_addresses": "Aucune adresse trouvée pour la recherche donnée",
       "invalid_selection": "Sélection d'adresse invalide",
       "no_schedule_found": "Aucun calendrier actuel trouvé pour l'adresse donnée"
     },
