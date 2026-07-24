@@ -11,24 +11,24 @@
   "config": {
     "step": {
       "user": {
-        "title": "邮政编码",
-        "description": "输入格式为 ##-### 的邮政编码（例如 02-001）",
+        "title": "搜索地址",
+        "description": "输入地址或邮政编码以搜索地址点",
         "data": {
-          "postal_code": "邮政编码"
+          "postal_code": "地址或邮政编码"
         },
         "data_description": {
-          "postal_code": "输入格式为 ##-### 的邮政编码，其中 # 是数字 0-9"
+          "postal_code": "输入街道名称、门牌号或邮政编码"
         }
       },
       "address": {
         "title": "选择地址",
-        "description": "邮政编码：{postal_code}。从此邮政编码的可用地址列表中选择地址。",
+        "description": "搜索结果：{postal_code}。从列表中选择地址。",
         "data": {
           "address": "选择地址",
           "update_interval": "更新间隔（天数）"
         },
         "data_description": {
-          "address": "从给定邮政编码的可用地址列表中选择地址",
+          "address": "从搜索结果中选择地址",
           "update_interval": "数据更新间隔（天数）（1 - 7 天）"
         }
       }
@@ -38,8 +38,7 @@
       "invalid_data": "API 返回的数据无效",
       "unknown": "意外错误",
       "required": "此字段为必填项",
-      "invalid_format": "格式无效。请输入格式为 ##-### 的邮政编码（例如 02-001）",
-      "no_addresses": "未找到给定邮政编码的地址",
+      "no_addresses": "未找到给定搜索查询的地址",
       "invalid_selection": "地址选择无效",
       "no_schedule_found": "未找到给定地址的当前时间表"
     },

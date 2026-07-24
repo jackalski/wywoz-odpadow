@@ -11,24 +11,24 @@
   "config": {
     "step": {
       "user": {
-        "title": "Kod pocztowy",
-        "description": "Wprowadź kod pocztowy w formacie ##-### (np. 02-001)",
+        "title": "Wyszukaj adres",
+        "description": "Wprowadź adres lub kod pocztowy, aby wyszukać punkt adresowy",
         "data": {
-          "postal_code": "Kod pocztowy"
+          "postal_code": "Adres lub kod pocztowy"
         },
         "data_description": {
-          "postal_code": "Wprowadź kod pocztowy w formacie ##-###, gdzie # to cyfra 0-9"
+          "postal_code": "Wprowadź ulicę, numer domu lub kod pocztowy"
         }
       },
       "address": {
         "title": "Wybierz adres",
-        "description": "Kod pocztowy: {postal_code}. Wybierz adres z listy dostępnych adresów dla tego kodu pocztowego.",
+        "description": "Wyniki wyszukiwania dla: {postal_code}. Wybierz adres z listy.",
         "data": {
           "address": "Wybierz adres",
           "update_interval": "Interwał aktualizacji (w dniach)"
         },
         "data_description": {
-          "address": "Wybierz adres z listy dostępnych adresów dla podanego kodu pocztowego",
+          "address": "Wybierz adres z listy wyników wyszukiwania",
           "update_interval": "Interwał aktualizacji danych w dniach (1 - 7 dni)"
         }
       }
@@ -38,8 +38,7 @@
       "invalid_data": "Nieprawidłowe dane z API",
       "unknown": "Nieoczekiwany błąd",
       "required": "To pole jest wymagane",
-      "invalid_format": "Nieprawidłowy format. Wprowadź kod pocztowy w formacie ##-### (np. 02-001)",
-      "no_addresses": "Nie znaleziono adresów dla podanego kodu pocztowego",
+      "no_addresses": "Nie znaleziono adresów dla podanego zapytania",
       "invalid_selection": "Nieprawidłowy wybór adresu",
       "no_schedule_found": "Dla podanego adresu nie odnaleziono aktualnego harmonogramu"
     },

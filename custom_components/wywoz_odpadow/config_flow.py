@@ -31,13 +31,10 @@ async def search_addresses(hass: HomeAssistant, postal_code: str) -> list[dict[s
     """Search for addresses using autocomplete API with postal code filter."""
     params = API_AUTOCOMPLETE_PARAMS.copy()
     
-    # Add postal code parameter if provided
     if postal_code:
-        # Remove dashes from postal code for API (format: ##-###)
-        postal_code_clean = postal_code.replace("-", "")
         params[
             "_portalCKMjunkschedules_WAR_portalCKMjunkschedulesportlet_INSTANCE_o5AIb2mimbRJ_name"
-        ] = postal_code_clean
+        ] = postal_code
     
     url = f"{API_BASE_URL}?{'&'.join(f'{k}={v}' for k, v in params.items())}"
     
@@ -244,17 +241,11 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         if user_input is not None:
             postal_code = user_input.get(CONF_POSTAL_CODE, "").strip()
-            
-            # Validate postal code format: ##-### (where #=0-9)
-            import re
-            postal_code_pattern = re.compile(r"^\d{2}-\d{3}$")
-            
+
             if not postal_code:
                 errors[CONF_POSTAL_CODE] = "required"
-            elif not postal_code_pattern.match(postal_code):
-                errors[CONF_POSTAL_CODE] = "invalid_format"
             else:
-                # Store postal code and move to address selection step
+                # Store search query and move to address selection step
                 self.postal_code = postal_code
                 return await self.async_step_address()
 

@@ -11,24 +11,24 @@
   "config": {
     "step": {
       "user": {
-        "title": "Postleitzahl",
-        "description": "Geben Sie die Postleitzahl im Format ##-### ein (z.B. 02-001)",
+        "title": "Adresse suchen",
+        "description": "Geben Sie eine Adresse oder Postleitzahl ein, um einen Adresspunkt zu suchen",
         "data": {
-          "postal_code": "Postleitzahl"
+          "postal_code": "Adresse oder Postleitzahl"
         },
         "data_description": {
-          "postal_code": "Geben Sie die Postleitzahl im Format ##-### ein, wobei # eine Ziffer 0-9 ist"
+          "postal_code": "Geben Sie einen Straßennamen, eine Hausnummer oder eine Postleitzahl ein"
         }
       },
       "address": {
         "title": "Adresse auswählen",
-        "description": "Postleitzahl: {postal_code}. Wählen Sie eine Adresse aus der Liste der verfügbaren Adressen für diese Postleitzahl aus.",
+        "description": "Suchergebnisse für: {postal_code}. Wählen Sie eine Adresse aus der Liste.",
         "data": {
           "address": "Adresse auswählen",
           "update_interval": "Aktualisierungsintervall (in Tagen)"
         },
         "data_description": {
-          "address": "Wählen Sie eine Adresse aus der Liste der verfügbaren Adressen für die angegebene Postleitzahl aus",
+          "address": "Wählen Sie eine Adresse aus den Suchergebnissen",
           "update_interval": "Datenaktualisierungsintervall in Tagen (1 - 7 Tage)"
         }
       }
@@ -38,8 +38,7 @@
       "invalid_data": "Ungültige Daten von der API",
       "unknown": "Unerwarteter Fehler",
       "required": "Dieses Feld ist erforderlich",
-      "invalid_format": "Ungültiges Format. Geben Sie die Postleitzahl im Format ##-### ein (z.B. 02-001)",
-      "no_addresses": "Keine Adressen für die angegebene Postleitzahl gefunden",
+      "no_addresses": "Keine Adressen für die angegebene Suchanfrage gefunden",
       "invalid_selection": "Ungültige Adressauswahl",
       "no_schedule_found": "Für die angegebene Adresse wurde kein aktueller Zeitplan gefunden"
     },
