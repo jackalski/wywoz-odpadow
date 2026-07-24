@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-07-24
+
+### Added
+- **Config flow**: Free-form address search — users can search by street name, house number, or unformatted postal code, not only a strict `##-###` code
+
+### Changed
+- **Dependencies**: Raised minimum `aiohttp` requirement from `>=3.8.0` to `>=3.14.1`
+
+### Fixed
+- **License**: Replaced short notice with full GPL-3.0 text so GitHub/HACS license detection succeeds
+
+---
+
 ## [1.2.1] - 2025-03-02
 
 ### Fixed
